@@ -1,0 +1,31 @@
+<table border="1px solid black">
+    <tr>
+        <th>Категория</th>
+        <th>Цена < 10</th>
+        <th>На складе</th>
+        <th>Есть а</th>
+    </tr>
+    <?php $coll = $this->getCountProductLessThree();
+    foreach ($coll as $item) : ?>
+        <tr>
+            <td>
+                <?php echo $item->getName() . "<br>"; ?>
+            </td>
+            <td>
+                <?php echo $this->getProductsCollectionByPrice($item->getId())->getSize(); ?>
+            </td>
+            <td>
+                <?php echo $this->getProductsCollectionByQty($item->getId())->getSize(); ?>
+            </td>
+
+            <td>
+                <?php echo $this->getProductsCollectionByName($item->getId())->getSize(); ?>
+            </td>
+
+        </tr>
+    <?php endforeach; ?>
+</table>
+
+
+
+

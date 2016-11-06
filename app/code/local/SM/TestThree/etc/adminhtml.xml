@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <system>
+            <children>
+                <testthree translate="title" module="testthree">
+                    <title>Test Three</title>
+                    <sort_order>0</sort_order>
+                    <action>adminhtml/index/index</action>
+                </testthree>
+            </children>
+        </system>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <testthree translate="title" module="testthree">
+                                        <titlte>Test Three</titlte>
+                                    </testthree>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SM_TestThree>
+            <version>1.0.0</version>
+        </SM_TestThree>
+    </modules>
+    <global>
+        <helpers>
+            <testthree>
+                <class>SM_TestThree_Helper</class>
+            </testthree>
+        </helpers>
+        <blocks>
+            <testthree>
+                <class>SM_TestThree_Block</class>
+            </testthree>
+        </blocks>
+    </global>
+
+    <frontend>
+
+    </frontend>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <testthree before="Mage_Adminhtml">SM_TestThree_Adminhtml</testthree>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <testthree>
+                    <file>inktoner.xml</file>
+                </testthree>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_index_index>
+        <reference name="content">
+            <block type="testthree/adminhtml_block" name="block" template="inktoner/product.phtml"/>
+        </reference>
+    </adminhtml_index_index>
+</layout>
